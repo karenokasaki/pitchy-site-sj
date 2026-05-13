@@ -1,0 +1,34 @@
+Field,Type,Location in HTML,Current Value,Suggested Value,Status,Notes
+Page Title,meta,"<title>",SJ Design Studio — Clone Your Top Performer,Clone Your Top Performer — SJ Design Studio,REVIEW,"Max 60 chars for Google SERP. Keep brand at end."
+Meta Description,meta,"<meta name=description>",We turn your best employee's expertise into your company's scalable system.,"We turn your top performer's expertise into your company's scalable system. Free 30-minute audit, no obligations.",REVIEW,"Max 155-160 chars. Mention free audit CTA for click-through."
+Meta Keywords,meta,"<meta name=keywords>",(empty),"AI automation, business operations, process automation, agentic AI, decision tree engine, operational blueprint, business systemization",REVIEW,"Lower priority since Google ignores keywords. Bing still uses them. 5-10 max."
+Canonical URL,meta,"<link rel=canonical>",(none),https://sjdesignstudio.com/,REVIEW,"Replace with final production URL"
+Author,meta,"<meta name=author>",(none),SJ Design Studio,DRAFT,
+Theme Color,meta,"<meta name=theme-color>",#0d0d0b,#0d0d0b,APPROVED,Matches the site's --bg-dark token
+Robots,meta,"<meta name=robots>",(none),"index, follow",DRAFT,"Change to noindex while in staging"
+Language,html lang attr,"<html lang=>",en,en,APPROVED,
+OG Type,Open Graph,"<meta property=og:type>",(none),website,DRAFT,
+OG Title,Open Graph,"<meta property=og:title>",(none),Clone Your Top Performer — SJ Design Studio,REVIEW,Usually same as page title
+OG Description,Open Graph,"<meta property=og:description>",(none),"Turn your top performer's expertise into your company's scalable system. Free audit, no obligations.",REVIEW,"Slightly more punchy than meta description"
+OG URL,Open Graph,"<meta property=og:url>",(none),https://sjdesignstudio.com/,REVIEW,Same as canonical
+OG Image,Open Graph,"<meta property=og:image>",(none),https://sjdesignstudio.com/assets/og-image.png,TODO,"Designer needs to create 1200x630 image. Save as assets/og-image.png"
+OG Image Alt,Open Graph,"<meta property=og:image:alt>",(none),"SJ Design Studio — turning expertise into scalable systems",REVIEW,
+OG Image Width,Open Graph,"<meta property=og:image:width>",(none),1200,APPROVED,
+OG Image Height,Open Graph,"<meta property=og:image:height>",(none),630,APPROVED,
+OG Site Name,Open Graph,"<meta property=og:site_name>",(none),SJ Design Studio,APPROVED,
+OG Locale,Open Graph,"<meta property=og:locale>",(none),en_US,REVIEW,Change if site is multilingual
+Twitter Card,Twitter,"<meta name=twitter:card>",(none),summary_large_image,APPROVED,
+Twitter Title,Twitter,"<meta name=twitter:title>",(none),Clone Your Top Performer — SJ Design Studio,REVIEW,Same as OG title
+Twitter Description,Twitter,"<meta name=twitter:description>",(none),"Turn your top performer's expertise into a scalable system.",REVIEW,Max 200 chars
+Twitter Image,Twitter,"<meta name=twitter:image>",(none),https://sjdesignstudio.com/assets/og-image.png,TODO,Can reuse OG image
+Twitter Site,Twitter,"<meta name=twitter:site>",(none),@sjdesignstudio,REVIEW,Replace with real handle. Optional but recommended
+Twitter Creator,Twitter,"<meta name=twitter:creator>",(none),@kevin,REVIEW,Replace with Kevin's handle. Optional
+JSON-LD Organization,structured-data,"<script type=application/ld+json>",(none),See below,DRAFT,"Organization schema for rich results"
+JSON-LD Organization Name,structured-data,(inside JSON),SJ Design Studio,SJ Design Studio,APPROVED,
+JSON-LD Organization URL,structured-data,(inside JSON),https://sjdesignstudio.com/,https://sjdesignstudio.com/,REVIEW,
+JSON-LD Organization Logo,structured-data,(inside JSON),https://sjdesignstudio.com/assets/sj-logo.png,https://sjdesignstudio.com/assets/sj-logo.png,APPROVED,
+JSON-LD Contact Email,structured-data,(inside JSON),kevin@sjdesignstudio.com,kevin@sjdesignstudio.com,APPROVED,Matches the displayed email
+Favicon (ICO),link,"<link rel=icon>",(none),/favicon.ico,TODO,Designer needs to create 32x32 favicon.ico
+Favicon (PNG),link,"<link rel=icon>",(none),/assets/favicon-32.png,TODO,32x32 PNG fallback
+Apple Touch Icon,link,"<link rel=apple-touch-icon>",(none),/assets/apple-touch-icon.png,TODO,180x180 PNG
+Site Manifest,link,"<link rel=manifest>",(none),/manifest.webmanifest,LOW-PRIORITY,Only needed if treating as PWA

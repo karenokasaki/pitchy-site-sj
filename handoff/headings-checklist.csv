@@ -1,0 +1,14 @@
+Level,Order,Section,Current Text,Suggested Final Text,SEO Notes,Status
+H1,1,Hero,Clone Your Top Performer.,Clone Your Top Performer.,"Primary page H1. Should contain primary keyword. Currently 25 chars — concise and brand-aligned. Only ONE H1 per page (correct).",APPROVED
+H2,2,Problem (Section 01),Every business has a version of this.,Every business has a version of this.,"Problem-framing headline. Sets up the value prop. No keyword density needed here.",APPROVED
+H2,3,Systems In Action (Section 02),"Human expertise, automated outcomes.","Human expertise, automated outcomes.","Section heading. Strong product positioning. ""Automated outcomes"" is a useful semantic keyword.",APPROVED
+H2,4,Operational Blueprint (Section 04),Free Business Audit,Free Business Audit,"CTA section. ""Free"" + ""Audit"" are strong action keywords. Could test ""Get Your Free Business Audit"" for clarity.",REVIEW
+H2,5 (proposed),Connect (Section ""let's connect""),(no heading currently — section uses eyebrow + email only),Let's Connect / Get In Touch,"Recommended to add. Section currently has no heading — only an eyebrow label and the email. An H2 helps screen readers and SEO.",TODO
+H3,6,Case 01 (inside Systems),Autonomous Project Management,Autonomous Project Management,"Case study title. Keyword-relevant (project management). Good.",APPROVED
+H3,7,Case 02 (inside Systems),Agentic Support Tier,Agentic Support Tier,"Niche term — ""Agentic"" is search-emerging. Useful for that audience.",APPROVED
+H3,8,Case 03 (inside Systems),Eliminating Repeat Inbound Volume,Eliminating Repeat Inbound Volume,"Outcome-framed title. Good for B2B SEO.",APPROVED
+H3,9,Work 01 (inside Works),Samsung Global Content,Samsung Global Content,"Client name first. Good for brand-recognition queries.",APPROVED
+H3,10,Work 02 (inside Works),Automated Decision Tree Engine,Automated Decision Tree Engine,"Product-feature title. ""Decision tree"" is a strong technical keyword.",APPROVED
+H3,11,Work 03 (inside Works),Interactive Samsung Simulator,Interactive Samsung Simulator,"Brand + product. Good for related queries.",APPROVED
+H3,12,Work 04 (inside Works),LG SKS Kitchen (Showroom Solution),LG SKS Kitchen (Showroom Solution),"Brand + product line. The parens add useful context but might be cleaner as a subtitle. Consider: ""LG SKS Kitchen — Showroom Solution""",REVIEW
+H3,13,Work 05 (inside Works),The Project Manager (Operations Intelligence),The Project Manager (Operations Intelligence),"Same parens pattern as above. Could clean up: ""Project Manager: Operations Intelligence""",REVIEW
