@@ -1,66 +1,33 @@
 # Pitch Site — SJ Design Studio
 
-Vanilla HTML/CSS/JS, single page, mobile-first responsive. Sem framework, sem build step.
+Vanilla HTML/CSS/JS, single page, mobile-first responsive. No framework, no build step.
 
-## Estrutura
+## Structure
 
 ```
-index.html        ← marcação semântica, uma <section> por bloco do Figma
-styles.css        ← tokens (CSS variables) extraídos do Figma + estilos
-script.js         ← só o toggle do menu mobile
-.env              ← FIGMA_TOKEN (não commitar — já está no .gitignore)
-scripts/extract.js← script para re-extrair conteúdo/tokens do Figma se precisar
-figma-raw.json    ← JSON cru do Figma (ignorado pelo git)
-figma-out/        ← saídas legíveis: tokens.json, content.json, structure.txt
+index.html    ← semantic markup
+styles.css    ← design tokens (CSS variables) + styles
+script.js     ← nav toggle, scroll-spy, intersection observers
+assets/       ← images, logo, icons
+handoff/      ← SEO, a11y, and content checklists for the team
 ```
 
-## Rodando
+## Running locally
 
-Basta abrir `index.html` no navegador. Para um servidor local (recomendado para
-testar fontes/CORS):
+Just open `index.html` in a browser. For a local server (recommended to test fonts and module imports):
 
 ```
 npx serve .
-# ou
+# or
 python -m http.server 8000
 ```
 
-## O que ainda falta
+## Fonts
 
-- **Imagens / ilustrações**: o Figma tem placeholders (cards do Samsung, LG SKS,
-  etc.) — exportar pelo Figma e colocar em `assets/`, depois referenciar nas
-  sections correspondentes.
-- **Logo**: o "sj" no nav está como texto + bolinha vermelha; trocar pelo SVG real
-  quando exportado.
-- **Formulário**: o markup está pronto mas sem backend. Conectar a Formspree /
-  Netlify Forms / endpoint próprio quando definirem.
-- **Animations**: nenhum scroll-reveal ou parallax — adicionar se quiser depois.
+All loaded via Google Fonts in `<head>`:
 
-## Re-extrair do Figma
-
-Se o design mudar:
-
-```
-node scripts/extract.js
-```
-
-Vai reescrever `figma-out/tokens.json`, `content.json` e `structure.txt` a partir
-de `figma-raw.json`. Para baixar o JSON de novo:
-
-```
-curl -H "X-Figma-Token: $FIGMA_TOKEN" \
-  "https://api.figma.com/v1/files/$FIGMA_FILE_KEY" -o figma-raw.json
-```
-
-## Tokens extraídos
-
-Cores principais e tipografia estão em `:root` no topo de `styles.css`. Family
-map:
-
-- **Inter** — display + corpo + botões
-- **JetBrains Mono** — eyebrows, labels, números de seção
-- **Roboto Serif** — corpo "leitura", subtítulos
-- **Newsreader** — captions das estatísticas
-- **Just Me Again Down Here** — anotações manuscritas ("AI + Human")
-
-Todas vêm via Google Fonts no `<head>`.
+- **Inter** — display + body + buttons
+- **JetBrains Mono** — eyebrows, labels, section markers
+- **Roboto Serif** — body lede paragraphs
+- **Newsreader** — stat captions (italic)
+- **Just Me Again Down Here** — handwritten annotations
