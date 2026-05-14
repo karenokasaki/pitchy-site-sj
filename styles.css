@@ -1,4 +1,45 @@
 /* =========================================================
+   Self-hosted fonts (latin subset only — see assets/fonts/)
+   Variable fonts: one file serves all weights via font-weight range.
+   ========================================================= */
+@font-face {
+   font-family: "Inter";
+   font-style: normal;
+   font-weight: 100 900;
+   font-display: swap;
+   src: url("assets/fonts/inter-latin.woff2") format("woff2");
+}
+@font-face {
+   font-family: "JetBrains Mono";
+   font-style: normal;
+   font-weight: 100 900;
+   font-display: swap;
+   src: url("assets/fonts/jetbrains-mono-latin.woff2") format("woff2");
+}
+@font-face {
+   font-family: "Newsreader";
+   font-style: italic;
+   font-weight: 100 900;
+   font-display: swap;
+   src: url("assets/fonts/newsreader-italic-latin.woff2") format("woff2");
+}
+@font-face {
+   font-family: "Newsreader";
+   font-style: normal;
+   font-weight: 100 900;
+   font-display: swap;
+   src: url("assets/fonts/newsreader-latin.woff2") format("woff2");
+}
+@font-face {
+   font-family: "Roboto Serif";
+   font-style: normal;
+   font-weight: 100 900;
+   font-stretch: 100%;
+   font-display: swap;
+   src: url("assets/fonts/roboto-serif-latin.woff2") format("woff2");
+}
+
+/* =========================================================
    Tokens — extracted from Figma "Design 01"
    ========================================================= */
 :root {
