@@ -34,7 +34,6 @@
    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
    --font-serif: "Roboto Serif", "Times New Roman", serif;
    --font-caption: "Newsreader", "Times New Roman", serif;
-   --font-hand: "Just Me Again Down Here", "Comic Sans MS", cursive;
 
    /* Fluid type — scales from ~mobile to ~1728 desktop */
    --fs-display: clamp(2.5rem, 1.2rem + 5.5vw, 5rem); /* 40 → 80 */
