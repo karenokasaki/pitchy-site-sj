@@ -713,21 +713,53 @@
 
       <script src="script.js" defer></script>
 
-      <!-- Spline 3D scene for hero — loads only on desktop/tablet, skips mobile to save battery/data -->
+      <!-- Spline 3D scene for hero — desktop/tablet only, deferred until idle + hero in view
+           to keep it off the critical path (huge TBT win on Lighthouse). -->
       <script type="module">
-         (async () => {
+         (() => {
             if (!window.matchMedia("(min-width: 900px)").matches) return;
             const canvas = document.getElementById("hero-3d");
             if (!canvas) return;
-            try {
-               const { Application } =
-                  await import("https://unpkg.com/@splinetool/runtime/build/runtime.js");
-               const app = new Application(canvas);
-               await app.load(
-                  "https://prod.spline.design/y97UoUeZ8Pf0k6m7/scene.splinecode",
-               );
-            } catch (err) {
-               console.warn("Spline scene failed to load:", err);
+
+            let started = false;
+            const start = async () => {
+               if (started) return;
+               started = true;
+               try {
+                  const { Application } = await import(
+                     "https://unpkg.com/@splinetool/runtime/build/runtime.js"
+                  );
+                  const app = new Application(canvas);
+                  await app.load(
+                     "https://prod.spline.design/y97UoUeZ8Pf0k6m7/scene.splinecode",
+                  );
+               } catch (err) {
+                  console.warn("Spline scene failed to load:", err);
+               }
+            };
+
+            // Only load when the hero is actually in view, and only after the browser is idle.
+            const schedule = () => {
+               if ("requestIdleCallback" in window) {
+                  requestIdleCallback(start, { timeout: 3000 });
+               } else {
+                  setTimeout(start, 1500);
+               }
+            };
+
+            if ("IntersectionObserver" in window) {
+               const io = new IntersectionObserver((entries) => {
+                  for (const entry of entries) {
+                     if (entry.isIntersecting) {
+                        io.disconnect();
+                        schedule();
+                        break;
+                     }
+                  }
+               });
+               io.observe(canvas);
+            } else {
+               schedule();
             }
          })();
       </script>
