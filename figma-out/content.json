@@ -1,0 +1,1821 @@
+[
+  {
+    "id": "86:423",
+    "name": "Hero",
+    "type": "FRAME",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1728,
+      "h": 1117
+    },
+    "textCount": 3,
+    "texts": [
+      {
+        "id": "86:433",
+        "name": "Header",
+        "text": "Clone your Top Performer.",
+        "family": "Inter",
+        "weight": 300,
+        "size": 80,
+        "lineHeight": 88,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 343,
+          "w": 820,
+          "h": 146
+        }
+      },
+      {
+        "id": "86:997",
+        "name": "Subheader",
+        "text": "We turn your best employee’s expertise into your company’s scalable system, liberating them from repetitive tasks and making your growth repeatable.",
+        "family": "Roboto Serif",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 31.920001983642578,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 545,
+          "w": 697,
+          "h": 96
+        }
+      },
+      {
+        "id": "86:436",
+        "name": "Button Text",
+        "text": "See how we clone excellence",
+        "family": "Inter",
+        "weight": 600,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 205,
+          "y": 729,
+          "w": 304,
+          "h": 13
+        }
+      }
+    ]
+  },
+  {
+    "id": "86:721",
+    "name": "nav",
+    "type": "FRAME",
+    "box": {
+      "x": 600,
+      "y": 47,
+      "w": 528,
+      "h": 66
+    },
+    "textCount": 4,
+    "texts": [
+      {
+        "id": "86:723",
+        "name": "what we do",
+        "text": "what we do",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 14,
+        "lineHeight": 18.48000144958496,
+        "letterSpacing": 2.24,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 628,
+          "y": 75,
+          "w": 105,
+          "h": 10
+        }
+      },
+      {
+        "id": "86:725",
+        "name": "works",
+        "text": "works",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 14,
+        "lineHeight": 18.48000144958496,
+        "letterSpacing": 2.24,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 797,
+          "y": 75,
+          "w": 51,
+          "h": 10
+        }
+      },
+      {
+        "id": "86:727",
+        "name": "offer",
+        "text": "offer",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 14,
+        "lineHeight": 18.48000144958496,
+        "letterSpacing": 2.24,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 912,
+          "y": 75,
+          "w": 51,
+          "h": 10
+        }
+      },
+      {
+        "id": "86:729",
+        "name": "contact",
+        "text": "contact",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 14,
+        "lineHeight": 18.48000144958496,
+        "letterSpacing": 2.24,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 1027,
+          "y": 75,
+          "w": 73,
+          "h": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": "86:987",
+    "name": "the problem",
+    "type": "FRAME",
+    "box": {
+      "x": 0,
+      "y": 1117,
+      "w": 1728,
+      "h": 759
+    },
+    "textCount": 4,
+    "texts": [
+      {
+        "id": "86:988",
+        "name": "Section Title",
+        "text": "01 • THE PROBLEM",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 313,
+          "y": 1242,
+          "w": 192,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:989",
+        "name": "Text block",
+        "text": "Every business has a version of this.",
+        "family": "Inter",
+        "weight": 300,
+        "size": 80,
+        "lineHeight": 88,
+        "letterSpacing": -2.4,
+        "align": "LEFT",
+        "box": {
+          "x": 168,
+          "y": 1354,
+          "w": 457,
+          "h": 322
+        }
+      },
+      {
+        "id": "86:992",
+        "name": "Main text",
+        "text": "Talented people spending half their day on repetitive tasks that an automated system could handle. It happens because their expertise is trapped in their heads instead of being built into your company’s logic.",
+        "family": "Roboto Serif",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 48,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 876,
+          "y": 1431,
+          "w": 682,
+          "h": 215
+        }
+      },
+      {
+        "id": "86:994",
+        "name": "Subtitle",
+        "text": "We build the system.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 40,
+        "lineHeight": 53.20000076293945,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 876,
+          "y": 1702,
+          "w": 398,
+          "h": 29
+        }
+      }
+    ]
+  },
+  {
+    "id": "86:446",
+    "name": "systems in action",
+    "type": "FRAME",
+    "box": {
+      "x": 0,
+      "y": 1876,
+      "w": 1728,
+      "h": 1433
+    },
+    "textCount": 46,
+    "texts": [
+      {
+        "id": "86:450",
+        "name": "Section title",
+        "text": "02 • Where We’ve Systemized Expertise",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 313,
+          "y": 2001,
+          "w": 448,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:447",
+        "name": "Human expertise, automated outcomes.",
+        "text": "Human expertise, automated outcomes.",
+        "family": "Inter",
+        "weight": 300,
+        "size": 80,
+        "lineHeight": 88,
+        "letterSpacing": -2.4,
+        "align": "LEFT",
+        "box": {
+          "x": 168,
+          "y": 2113,
+          "w": 758,
+          "h": 146
+        }
+      },
+      {
+        "id": "86:451",
+        "name": "Heading",
+        "text": "Three examples with client-sensitive details withheld.",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 20,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 3.2,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 739,
+          "y": 2359,
+          "w": 818,
+          "h": 15
+        }
+      },
+      {
+        "id": "86:900",
+        "name": "Case title",
+        "text": "case 01",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2460,
+          "w": 83,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:929",
+        "name": "Case title",
+        "text": "case 02",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2460,
+          "w": 83,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:958",
+        "name": "Case title",
+        "text": "case 03",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2460,
+          "w": 83,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:905",
+        "name": "Case description title",
+        "text": "AUTONOMOUS PROJECT MANAGEMENT",
+        "family": "JetBrains Mono",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 31.920001983642578,
+        "letterSpacing": -0.72,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2518,
+          "w": 381,
+          "h": 50
+        }
+      },
+      {
+        "id": "86:934",
+        "name": "Case description title",
+        "text": "AGENTIC SUPPORT TIER\n",
+        "family": "JetBrains Mono",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 31.920001983642578,
+        "letterSpacing": -0.72,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2518,
+          "w": 381,
+          "h": 50
+        }
+      },
+      {
+        "id": "86:963",
+        "name": "Case description title",
+        "text": "ELIMINATING REPEAT INBOUND VOLUME",
+        "family": "JetBrains Mono",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 31.920001983642578,
+        "letterSpacing": -0.72,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2518,
+          "w": 381,
+          "h": 50
+        }
+      },
+      {
+        "id": "86:906",
+        "name": "Case description",
+        "text": "We built an operations agent that syncs messy Slack data into Airtable and delegates tasks.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2592,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:935",
+        "name": "Case description",
+        "text": "We deployed a decision-intelligence agent that resolves support issues before escalation.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2592,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:964",
+        "name": "Case description",
+        "text": "We built a product agent that handles onboarding, guidance, and troubleshooting.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2592,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:910",
+        "name": "Benefit quantity",
+        "text": "8-10",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2665,
+          "w": 66,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:939",
+        "name": "Benefit quantity",
+        "text": "350",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2665,
+          "w": 57,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:968",
+        "name": "Benefit quantity",
+        "text": "65%",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2665,
+          "w": 63,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:911",
+        "name": "Benefit detail",
+        "text": "hours recovered weekly",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 287,
+          "y": 2672,
+          "w": 199,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:940",
+        "name": "Benefit detail",
+        "text": "tickets deflected monthly",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 739,
+          "y": 2672,
+          "w": 212,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:969",
+        "name": "Benefit detail",
+        "text": "reduction in inbound calls",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1206,
+          "y": 2672,
+          "w": 228,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:912",
+        "name": "Benefit additional info",
+        "text": "Reduced manual status checks, summaries, and follow-ups.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2712,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:941",
+        "name": "Benefit additional info",
+        "text": "Tier-1 issues resolved autonomously without staff involvement.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2712,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:970",
+        "name": "Benefit additional info",
+        "text": "Common questions resolved at the product layer before reaching live teams.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2712,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:915",
+        "name": "Benefit quantity",
+        "text": "6–8",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2777,
+          "w": 54,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:944",
+        "name": "Benefit quantity",
+        "text": "$4,000",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2777,
+          "w": 101,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:973",
+        "name": "Benefit quantity",
+        "text": "$6,000",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2777,
+          "w": 101,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:916",
+        "name": "Benefit detail",
+        "text": "hrs faster escalation detection",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 275,
+          "y": 2784,
+          "w": 255,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:945",
+        "name": "Benefit detail",
+        "text": "support labor saved monthly",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 783,
+          "y": 2784,
+          "w": 249,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:974",
+        "name": "Benefit detail",
+        "text": "reduction in monthly overhead",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1244,
+          "y": 2784,
+          "w": 268,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:917",
+        "name": "Benefit additional info",
+        "text": "Flagged unanswered client messages before they became delays.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2824,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:946",
+        "name": "Benefit additional info",
+        "text": "Equivalent to 1.5 support staff reallocated to complex cases.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2824,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:975",
+        "name": "Benefit additional info",
+        "text": "Inbound volume drop reduced staffing requirements across two shifts.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2824,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:920",
+        "name": "Benefit quantity",
+        "text": "25–45x",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2889,
+          "w": 106,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:949",
+        "name": "Benefit quantity",
+        "text": "90 sec.",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2889,
+          "w": 104,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:978",
+        "name": "Benefit quantity",
+        "text": "Zero-wait",
+        "family": "Inter",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 35.20000076293945,
+        "letterSpacing": -0.96,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2889,
+          "w": 138,
+          "h": 23
+        }
+      },
+      {
+        "id": "86:921",
+        "name": "Benefit detail",
+        "text": "estimated monthly ROI",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 327,
+          "y": 2896,
+          "w": 204,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:950",
+        "name": "Benefit detail",
+        "text": "average resolution time",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 786,
+          "y": 2896,
+          "w": 202,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:979",
+        "name": "Benefit detail",
+        "text": "product guidance",
+        "family": "Newsreader",
+        "weight": 300,
+        "size": 24,
+        "lineHeight": 26.400001525878906,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1281,
+          "y": 2896,
+          "w": 150,
+          "h": 16
+        }
+      },
+      {
+        "id": "86:922",
+        "name": "Benefit additional info",
+        "text": "Saved ~$1,200–1,400/month at ~$30–50/month infrastructure cost.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 2936,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:951",
+        "name": "Benefit additional info",
+        "text": "Symptom-based routing gets customers to the right fix immediately.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 2936,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:980",
+        "name": "Benefit additional info",
+        "text": "Users get step-by-step answers instantly without tickets, queues, or agents.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.280000686645508,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 2936,
+          "w": 381,
+          "h": 33
+        }
+      },
+      {
+        "id": "86:925",
+        "name": "Footer detail",
+        "text": "project operations",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 213,
+          "y": 3049,
+          "w": 179,
+          "h": 37
+        }
+      },
+      {
+        "id": "86:926",
+        "name": "Footer detail",
+        "text": "AUTONOMOUS \nPM INTELLIGENCE AGENT",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 416,
+          "y": 3049,
+          "w": 178,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:954",
+        "name": "Footer detail",
+        "text": "CONSUMER ELECTRONICS SUPPORT",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 674,
+          "y": 3049,
+          "w": 179,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:955",
+        "name": "Footer detail",
+        "text": "Automated decision tree Engine",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 877,
+          "y": 3049,
+          "w": 178,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:983",
+        "name": "Footer detail",
+        "text": "samsung support experience",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 1135,
+          "y": 3049,
+          "w": 179,
+          "h": 37
+        }
+      },
+      {
+        "id": "86:984",
+        "name": "Footer detail",
+        "text": "SIMULATOR + AI ASSISTED HELP ENGINE",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 1338,
+          "y": 3049,
+          "w": 178,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:452",
+        "name": "Disclaimer Text",
+        "text": "*Results vary by business size and workflow complexity. Audit required for accurate projection.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 14,
+        "lineHeight": 16.94318199157715,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 3174,
+          "w": 628,
+          "h": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": "86:541",
+    "name": "works",
+    "type": "FRAME",
+    "box": {
+      "x": 0,
+      "y": 3309,
+      "w": 1728,
+      "h": 5116
+    },
+    "textCount": 31,
+    "texts": [
+      {
+        "id": "86:545",
+        "name": "Header Title",
+        "text": "03 • works",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 313,
+          "y": 3434,
+          "w": 119,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:880",
+        "name": "Details Subtitle",
+        "text": "AI + Human",
+        "family": "Just Me Again Down Here",
+        "weight": 400,
+        "size": 32,
+        "lineHeight": 42.560001373291016,
+        "letterSpacing": 0,
+        "align": "CENTER",
+        "box": {
+          "x": 614,
+          "y": 3652,
+          "w": 118,
+          "h": 43
+        }
+      },
+      {
+        "id": "86:881",
+        "name": "Details Title",
+        "text": "Advanced Automation",
+        "family": "Just Me Again Down Here",
+        "weight": 400,
+        "size": 32,
+        "lineHeight": 42.560001373291016,
+        "letterSpacing": 0,
+        "align": "CENTER",
+        "box": {
+          "x": 954,
+          "y": 4050,
+          "w": 201,
+          "h": 43
+        }
+      },
+      {
+        "id": "86:838",
+        "name": "Section Title",
+        "text": "Samsung Global Content",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 28,
+        "lineHeight": 36.96000289916992,
+        "letterSpacing": 4.48,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 4834,
+          "w": 1382,
+          "h": 20
+        }
+      },
+      {
+        "id": "86:842",
+        "name": "Subsection Title",
+        "text": "THE PROBLEM",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 4915,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:843",
+        "name": "Subsection Text",
+        "text": "Launching product content across 80+ regional websites in 45 languages created a massive risk for inconsistency and manual error.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 368,
+          "y": 4915,
+          "w": 352,
+          "h": 85
+        }
+      },
+      {
+        "id": "86:849",
+        "name": "Subsection Title",
+        "text": "execution",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 4915,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:850",
+        "name": "Subsection Text",
+        "text": "A single automation layer that unified human oversight with machine execution. Content in, 45 languages out, deployed across every site simultaneously.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 4915,
+          "w": 492,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:856",
+        "name": "Subsection Title",
+        "text": "RESULT",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 5016,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:854",
+        "name": "Subsection Text",
+        "text": "100% launch consistency across 85 global sites. Content volume scaled 10x with zero additional headcount.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 5016,
+          "w": 492,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:785",
+        "name": "Section Title",
+        "text": "Automated decision tree Engine",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 28,
+        "lineHeight": 36.96000289916992,
+        "letterSpacing": 4.48,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 5857,
+          "w": 1382,
+          "h": 20
+        }
+      },
+      {
+        "id": "86:789",
+        "name": "Subsection Title",
+        "text": "THE PROBLEM",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 5938,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:790",
+        "name": "Subsection Text",
+        "text": "Their best support agents carried years of knowledge in their heads. When they were busy, everything slowed down. When they left, that knowledge walked out the door.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 368,
+          "y": 5938,
+          "w": 352,
+          "h": 109
+        }
+      },
+      {
+        "id": "86:796",
+        "name": "Subsection Title",
+        "text": "execution",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 5938,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:797",
+        "name": "Subsection Text",
+        "text": "We extracted the logic of their top performers and hardwired it into the system. Every decision and solution path captured, automated, and deployed.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 5938,
+          "w": 492,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:803",
+        "name": "Subsection Title",
+        "text": "RESULT",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 6039,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:801",
+        "name": "Subsection Text",
+        "text": "New hires perform at expert level on day one, senior staff are never interrupted by routine problems again, and response times dropped from 3 days to 4 minutes.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 6039,
+          "w": 492,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:761",
+        "name": "Section Title",
+        "text": "Interactive Samsung Simulator",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 28,
+        "lineHeight": 36.96000289916992,
+        "letterSpacing": 4.48,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 6880,
+          "w": 1382,
+          "h": 20
+        }
+      },
+      {
+        "id": "86:765",
+        "name": "Subsection Title",
+        "text": "THE PROBLEM",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 6961,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:766",
+        "name": "Subsection Text",
+        "text": "Their best support engineer couldn't be everywhere and every customer who couldn't reach him either called in or walked away.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 368,
+          "y": 6961,
+          "w": 352,
+          "h": 85
+        }
+      },
+      {
+        "id": "86:772",
+        "name": "Subsection Title",
+        "text": "execution",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 6961,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:773",
+        "name": "Subsection Text",
+        "text": "We cloned his entire diagnostic logic into an interactive simulator available to every customer, on every device, at any hour.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 6961,
+          "w": 492,
+          "h": 61
+        }
+      },
+      {
+        "id": "86:779",
+        "name": "Subsection Title",
+        "text": "RESULT",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 7062,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:777",
+        "name": "Subsection Text",
+        "text": "31% more customers now resolve issues without a human, 12 hours of manual labor are recovered every week, and their best engineer effectively scales without limit.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 7062,
+          "w": 492,
+          "h": 85
+        }
+      },
+      {
+        "id": "86:737",
+        "name": "Section Title",
+        "text": "The Project Manager (Operations Intelligence)",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 28,
+        "lineHeight": 36.96000289916992,
+        "letterSpacing": 4.48,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 7985,
+          "w": 1382,
+          "h": 20
+        }
+      },
+      {
+        "id": "86:743",
+        "name": "Subsection Title",
+        "text": "THE PROBLEM",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 173,
+          "y": 8066,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:744",
+        "name": "Subsection Text",
+        "text": "PM was spending 2.5 hours every day just keeping up, manually cross-referencing data, monitoring Slack, and supervising every task. He was a reactive bottleneck when his team needed a proactive leader.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 368,
+          "y": 8066,
+          "w": 366,
+          "h": 109
+        }
+      },
+      {
+        "id": "86:750",
+        "name": "Subsection Title",
+        "text": "execution",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 8066,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:751",
+        "name": "Subsection Text",
+        "text": "We codified his own logic: how he triaged urgent messages, identified delays, and prioritized action, then built an autonomous agent that handles all of it before it ever reaches him.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 8066,
+          "w": 492,
+          "h": 85
+        }
+      },
+      {
+        "id": "86:754",
+        "name": "Subsection Title",
+        "text": "RESULT",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.760000228881836,
+        "letterSpacing": 2.88,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 868,
+          "y": 8191,
+          "w": 162,
+          "h": 13
+        }
+      },
+      {
+        "id": "86:755",
+        "name": "Subsection Text",
+        "text": "Daily oversight dropped from 2.5 hours to 15 minutes, escalations are now caught 6 to 8 hours faster, and the entire system runs at $30–50 a month in infrastructure. Saves $1,200 to $1,400 every month without an ops coordinator.",
+        "family": "Inter",
+        "weight": 400,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 1063,
+          "y": 8191,
+          "w": 492,
+          "h": 109
+        }
+      }
+    ]
+  },
+  {
+    "id": "86:1032",
+    "name": "the operational blueprint",
+    "type": "FRAME",
+    "box": {
+      "x": 0,
+      "y": 8425,
+      "w": 1728,
+      "h": 882
+    },
+    "textCount": 7,
+    "texts": [
+      {
+        "id": "86:1035",
+        "name": "04 • THE OPERATIONAL BLUEPRINT",
+        "text": "04 • THE OPERATIONAL BLUEPRINT",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 312,
+          "y": 8550,
+          "w": 363,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:1052",
+        "name": "Free Business Audit",
+        "text": "Free Business Audit",
+        "family": "Inter",
+        "weight": 300,
+        "size": 80,
+        "lineHeight": 88,
+        "letterSpacing": 0,
+        "align": "LEFT",
+        "box": {
+          "x": 523,
+          "y": 8670,
+          "w": 682,
+          "h": 58
+        }
+      },
+      {
+        "id": "86:1041",
+        "name": "30 minutes",
+        "text": "30 minutes",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 587,
+          "y": 8810,
+          "w": 119,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:1046",
+        "name": "no obligations",
+        "text": "no obligations",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 786,
+          "y": 8810,
+          "w": 168,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:1051",
+        "name": "no pitch deck",
+        "text": "no pitch deck",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 1034,
+          "y": 8810,
+          "w": 156,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:1053",
+        "name": "We walk through your operations, identify what's costing you the most, and tell you exactly what can and can’t be replaced. If the number isn't worth it, we'll tell you that too.",
+        "text": "We walk through your operations, identify what's costing you the most, and tell you exactly what can and can’t be replaced. If the number isn't worth it, we'll tell you that too.",
+        "family": "Roboto Serif",
+        "weight": 300,
+        "size": 32,
+        "lineHeight": 42.560001373291016,
+        "letterSpacing": 0,
+        "align": "CENTER",
+        "box": {
+          "x": 414,
+          "y": 8904,
+          "w": 900,
+          "h": 129
+        }
+      },
+      {
+        "id": "86:1055",
+        "name": "Request Your 10x Audit",
+        "text": "Request Your 10x Audit",
+        "family": "Inter",
+        "weight": 600,
+        "size": 18,
+        "lineHeight": 23.940000534057617,
+        "letterSpacing": 0,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 745,
+          "y": 9137,
+          "w": 238,
+          "h": 13
+        }
+      }
+    ]
+  },
+  {
+    "id": "86:710",
+    "name": "connect",
+    "type": "FRAME",
+    "box": {
+      "x": 0,
+      "y": 9307,
+      "w": 1728,
+      "h": 528
+    },
+    "textCount": 2,
+    "texts": [
+      {
+        "id": "86:713",
+        "name": "let’s connect",
+        "text": "let’s connect",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 312,
+          "y": 9432,
+          "w": 156,
+          "h": 12
+        }
+      },
+      {
+        "id": "86:714",
+        "name": "kevin@sjdesignstudio.com",
+        "text": "kevin@sjdesignstudio.com",
+        "family": "Inter",
+        "weight": 300,
+        "size": 80,
+        "lineHeight": 88,
+        "letterSpacing": -2.4,
+        "align": "LEFT",
+        "box": {
+          "x": 396,
+          "y": 9552,
+          "w": 936,
+          "h": 58
+        }
+      }
+    ]
+  },
+  {
+    "id": "86:719",
+    "name": "copyright",
+    "type": "FRAME",
+    "box": {
+      "x": 0,
+      "y": 9835,
+      "w": 1728,
+      "h": 110
+    },
+    "textCount": 1,
+    "texts": [
+      {
+        "id": "86:720",
+        "name": "©2024 • sj design studio",
+        "text": "©2024 • sj design studio",
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "size": 16,
+        "lineHeight": 21.1200008392334,
+        "letterSpacing": 2.56,
+        "textCase": "UPPER",
+        "align": "LEFT",
+        "box": {
+          "x": 719,
+          "y": 9884,
+          "w": 290,
+          "h": 12
+        }
+      }
+    ]
+  }
+]

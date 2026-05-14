@@ -1,0 +1,64 @@
+[
+  {
+    "section": "Hero",
+    "bolds": []
+  },
+  {
+    "section": "the problem",
+    "bolds": []
+  },
+  {
+    "section": "systems in action",
+    "bolds": []
+  },
+  {
+    "section": "works",
+    "bolds": [
+      {
+        "text": "100% launch consistency across 85 global sites. Content volume scaled 10x with zero additional headcount.",
+        "bold": [
+          "100% launch consistency",
+          "scaled 10x with zero additional headcount."
+        ]
+      },
+      {
+        "text": "New hires perform at expert level on day one, senior staff are never interrupted by routine problems again, and response times dropped from 3 days to 4 minutes.",
+        "bold": [
+          "dropped from 3 days to 4 minutes."
+        ]
+      },
+      {
+        "text": "31% more customers now resolve issues without a human, 12 hours of manual labor are recovered every week, and their best engineer effectively scales without limit.",
+        "bold": [
+          "31% more customers",
+          "12 hours of manual labor"
+        ]
+      },
+      {
+        "text": "Daily oversight dropped from 2.5 hours to 15 minutes, escalations are now caught 6 to 8 hours faster, and the entire system runs at $30–50 a month in infrastructure. Saves $1,200 to $1,400 every month without an ops coordinator.",
+        "bold": [
+          "2.5 hours to 15 minutes",
+          "6 to 8 hours faster",
+          "$30–50 a month in infrastructure",
+          "$1,200 to $1,400 every month"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "the operational blueprint",
+    "bolds": []
+  },
+  {
+    "section": "connect",
+    "bolds": []
+  },
+  {
+    "section": "copyright",
+    "bolds": []
+  },
+  {
+    "section": "nav",
+    "bolds": []
+  }
+]
