@@ -127,6 +127,7 @@
             />
          </button>
 
+         <span class="nav__pill" aria-hidden="true"></span>
          <ul class="nav__menu" id="nav-menu">
             <li><a href="#what-we-do" class="is-active">what we do</a></li>
             <li><a href="#works">works</a></li>
@@ -825,22 +826,17 @@
                <form
                   class="connect__form"
                   id="contact-form"
-                  action="https://formsubmit.co/karen@sjdesignstudio.com"
+                  action="https://api.web3forms.com/submit"
                   method="POST"
                >
-                  <!-- FormSubmit config (hidden inputs) -->
+                  <input type="hidden" name="access_key" value="3898e491-12a6-4fc7-aac7-6dce00b8362c" />
                   <input
                      type="hidden"
-                     name="_subject"
+                     name="subject"
                      value="New contact from sjdesignstudio.com"
                   />
-                  <input type="hidden" name="_captcha" value="true" />
-                  <input type="hidden" name="_template" value="table" />
-                  <input
-                     type="hidden"
-                     name="_next"
-                     value="https://sjdesignstudio.com/?sent=1"
-                  />
+                  <input type="hidden" name="from_name" value="sjdesignstudio.com" />
+                  <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
                   <div class="connect__row">
                      <label class="field field--line">
                         <span class="sr-only">Full name</span>
@@ -872,6 +868,7 @@
                         required
                      ></textarea>
                   </label>
+                  <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
                   <button
                      type="submit"
                      class="connect__send"
@@ -895,107 +892,124 @@
             <div class="container faq__inner">
                <p class="eyebrow eyebrow--gold" id="faq-title">07 &bull; FAQ</p>
                <ul class="faq__list">
-                  <li>
-                     <details class="faq__item" name="faq" open>
-                        <summary class="faq__q">
-                           <span>What does this cost?</span>
-                           <span class="faq__icon" aria-hidden="true"></span>
-                        </summary>
-                        <div class="faq__a">
-                           <p>
-                              Audits are free. Builds typically run
-                              $15K&ndash;$60K for a single agent or workflow,
-                              depending on complexity and integrations.
-                              Infrastructure runs $30&ndash;200/month after
-                              launch. We'll quote you on the audit call.
-                           </p>
-                        </div>
-                     </details>
+                  <li class="faq__item is-expanded">
+                     <button
+                        class="faq__q"
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls="faq-a-1"
+                     >
+                        <span>What does this cost?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
+                     </button>
+                     <div class="faq__a" id="faq-a-1" role="region">
+                        <p>
+                           Audits are free. Builds typically run
+                           $15K&ndash;$60K for a single agent or workflow,
+                           depending on complexity and integrations.
+                           Infrastructure runs $30&ndash;200/month after launch.
+                           We'll quote you on the audit call.
+                        </p>
+                     </div>
                   </li>
-                  <li>
-                     <details class="faq__item" name="faq">
-                        <summary class="faq__q">
-                           <span>How long does a typical build take?</span>
-                           <span class="faq__icon" aria-hidden="true"></span>
-                        </summary>
-                        <div class="faq__a">
-                           <p>
-                              Most projects ship in 4&ndash;8 weeks from
-                              kickoff. We won't take on work we can't deliver in
-                              under 12 weeks.
-                           </p>
-                        </div>
-                     </details>
+                  <li class="faq__item">
+                     <button
+                        class="faq__q"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-a-2"
+                     >
+                        <span>How long does a typical build take?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
+                     </button>
+                     <div class="faq__a" id="faq-a-2" role="region">
+                        <p>
+                           Most projects ship in 4&ndash;8 weeks from kickoff.
+                           We won't take on work we can't deliver in under 12
+                           weeks.
+                        </p>
+                     </div>
                   </li>
-                  <li>
-                     <details class="faq__item" name="faq">
-                        <summary class="faq__q">
-                           <span>What if my data is messy?</span>
-                           <span class="faq__icon" aria-hidden="true"></span>
-                        </summary>
-                        <div class="faq__a">
-                           <p>
-                              It always is. We design around messy data, not
-                              against it. The decision-tree case study you read
-                              about started with a Slack channel that nobody had
-                              cleaned in three years.
-                           </p>
-                        </div>
-                     </details>
+                  <li class="faq__item">
+                     <button
+                        class="faq__q"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-a-3"
+                     >
+                        <span>What if my data is messy?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
+                     </button>
+                     <div class="faq__a" id="faq-a-3" role="region">
+                        <p>
+                           It always is. We design around messy data, not
+                           against it. The decision-tree case study you read
+                           about started with a Slack channel that nobody had
+                           cleaned in three years.
+                        </p>
+                     </div>
                   </li>
-                  <li>
-                     <details class="faq__item" name="faq">
-                        <summary class="faq__q">
-                           <span
-                              >Do you only work with consumer electronics
-                              companies?</span
-                           >
-                           <span class="faq__icon" aria-hidden="true"></span>
-                        </summary>
-                        <div class="faq__a">
-                           <p>
-                              No. Our published case studies are weighted toward
-                              Samsung because that's where we've been allowed to
-                              use the name. We've shipped systems for [X, Y, Z
-                              industries].
-                           </p>
-                        </div>
-                     </details>
+                  <li class="faq__item">
+                     <button
+                        class="faq__q"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-a-4"
+                     >
+                        <span
+                           >Do you only work with consumer electronics
+                           companies?</span
+                        >
+                        <span class="faq__icon" aria-hidden="true"></span>
+                     </button>
+                     <div class="faq__a" id="faq-a-4" role="region">
+                        <p>
+                           No. Our published case studies are weighted toward
+                           Samsung because that's where we've been allowed to
+                           use the name. We've shipped systems for [X, Y, Z
+                           industries].
+                        </p>
+                     </div>
                   </li>
-                  <li>
-                     <details class="faq__item" name="faq">
-                        <summary class="faq__q">
-                           <span
-                              >What happens to the employees whose work gets
-                              automated?</span
-                           >
-                           <span class="faq__icon" aria-hidden="true"></span>
-                        </summary>
-                        <div class="faq__a">
-                           <p>
-                              Every system we've shipped freed those people to
-                              do higher-leverage work &mdash; not replaced them.
-                              That's the whole reason the framing is "clone,"
-                              not "replace." If you're looking to cut headcount,
-                              we're probably not the right fit.
-                           </p>
-                        </div>
-                     </details>
+                  <li class="faq__item">
+                     <button
+                        class="faq__q"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-a-5"
+                     >
+                        <span
+                           >What happens to the employees whose work gets
+                           automated?</span
+                        >
+                        <span class="faq__icon" aria-hidden="true"></span>
+                     </button>
+                     <div class="faq__a" id="faq-a-5" role="region">
+                        <p>
+                           Every system we've shipped freed those people to do
+                           higher-leverage work &mdash; not replaced them.
+                           That's the whole reason the framing is "clone," not
+                           "replace." If you're looking to cut headcount, we're
+                           probably not the right fit.
+                        </p>
+                     </div>
                   </li>
-                  <li>
-                     <details class="faq__item" name="faq">
-                        <summary class="faq__q">
-                           <span>Can I see one of your systems running?</span>
-                           <span class="faq__icon" aria-hidden="true"></span>
-                        </summary>
-                        <div class="faq__a">
-                           <p>
-                              On the audit call, yes &mdash; we'll walk you
-                              through a live deployment relevant to your
-                              business.
-                           </p>
-                        </div>
-                     </details>
+                  <li class="faq__item">
+                     <button
+                        class="faq__q"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-a-6"
+                     >
+                        <span>Can I see one of your systems running?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
+                     </button>
+                     <div class="faq__a" id="faq-a-6" role="region">
+                        <p>
+                           On the audit call, yes &mdash; we'll walk you
+                           through a live deployment relevant to your business.
+                        </p>
+                     </div>
                   </li>
                </ul>
             </div>
@@ -1005,10 +1019,11 @@
       <!-- =================== FOOTER =================== -->
       <footer class="copyright">
          <div class="container copyright__inner">
-            <p>&copy;2024 &bull; sj design studio</p>
+            <p>&copy;2024 &bull; <a href="http://www.sjdesignstudio.com/" target="_blank" rel="noopener">sj design studio</a></p>
          </div>
       </footer>
 
+      <script src="https://web3forms.com/client/script.js" async defer></script>
       <script src="script.js" defer></script>
 
       <!-- Spline 3D scene for hero — desktop/tablet only, deferred until idle + hero in view

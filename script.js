@@ -90,27 +90,96 @@
    update();
 })();
 
-// FAQ accordion: only one item open at a time.
-// Modern browsers handle this natively via the [name] attribute on <details>;
-// this is the fallback for older ones (and is a no-op where the native
-// behavior already kicks in).
+// FAQ accordion: single-open, ARIA pattern (button + aria-expanded).
+// Height is animated explicitly via Web Animations API (open: 0 →
+// scrollHeight, close: scrollHeight → 0) so the transition is reliable in
+// both directions every time. Class .is-expanded is toggled at the right
+// moment so the post-animation static height comes from CSS, not inline.
 (() => {
-   const items = document.querySelectorAll('details[name="faq"]');
-   if (items.length < 2) return;
-   items.forEach((d) => {
-      d.addEventListener('toggle', () => {
-         if (!d.open) return;
+   const items = Array.from(document.querySelectorAll('.faq__item'));
+   if (!items.length) return;
+
+   const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+   ).matches;
+   const DURATION = reducedMotion ? 0 : 320;
+   const EASING = 'cubic-bezier(0.4, 0, 0.2, 1)';
+
+   const setBtn = (item, expanded) => {
+      const btn = item.querySelector('.faq__q');
+      if (btn) btn.setAttribute('aria-expanded', String(expanded));
+   };
+
+   const open = (item) => {
+      const a = item.querySelector('.faq__a');
+      if (!a) return;
+      // Add the class first so CSS-controlled height becomes "auto" — then
+      // measure scrollHeight and animate from 0 up to it. WAAPI overrides
+      // height inline only during the animation; after onfinish the
+      // element's height reverts to CSS (auto / natural).
+      item.classList.add('is-expanded');
+      setBtn(item, true);
+      if (DURATION === 0) return;
+      const target = a.scrollHeight;
+      if (item._anim) item._anim.cancel();
+      item._anim = a.animate(
+         [{ height: '0px' }, { height: target + 'px' }],
+         { duration: DURATION, easing: EASING },
+      );
+      item._anim.onfinish = () => {
+         item._anim = null;
+      };
+   };
+
+   const close = (item) => {
+      const a = item.querySelector('.faq__a');
+      if (!a) return;
+      setBtn(item, false);
+      if (DURATION === 0) {
+         item.classList.remove('is-expanded');
+         return;
+      }
+      // Measure current natural height before stripping .is-expanded — once
+      // we remove the class, CSS forces height: 0 and scrollHeight collapses.
+      const start = a.scrollHeight;
+      if (item._anim) item._anim.cancel();
+      item._anim = a.animate(
+         [{ height: start + 'px' }, { height: '0px' }],
+         { duration: DURATION, easing: EASING },
+      );
+      item._anim.onfinish = () => {
+         item.classList.remove('is-expanded');
+         item._anim = null;
+      };
+   };
+
+   items.forEach((item) => {
+      const btn = item.querySelector('.faq__q');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+         const isOpen = item.classList.contains('is-expanded');
+         if (isOpen) {
+            close(item);
+            return;
+         }
+         // Accordion: close every other open item before opening this one
          items.forEach((other) => {
-            if (other !== d && other.open) other.open = false;
+            if (other !== item && other.classList.contains('is-expanded')) {
+               close(other);
+            }
          });
+         open(item);
       });
    });
 })();
 
-// Mobile nav toggle + active-item sync (click + scroll-spy).
+// Mobile nav toggle + active-item sync (click + scroll-spy) + desktop
+// sliding pill (the white indicator that follows the hovered/active link).
 (() => {
+  const nav = document.querySelector('.nav');
   const toggle = document.querySelector('.nav__toggle');
   const menu = document.getElementById('nav-menu');
+  const pill = document.querySelector('.nav__pill');
   if (!menu) return;
 
   const links = Array.from(menu.querySelectorAll('a[href^="#"]'));
@@ -136,11 +205,47 @@
     });
   }
 
+  // -- Sliding pill (desktop only — hidden via CSS on mobile) --
+  const getActiveLink = () =>
+    menu.querySelector('a.is-active') || links[0];
+
+  const movePillTo = (link) => {
+    if (!pill || !nav || !link) return;
+    const navRect = nav.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    pill.style.width = linkRect.width + 'px';
+    pill.style.height = linkRect.height + 'px';
+    pill.style.transform =
+      `translate(${linkRect.left - navRect.left}px, ${linkRect.top - navRect.top}px)`;
+    for (const a of links) a.classList.toggle('is-covered', a === link);
+  };
+
+  const syncPill = () => movePillTo(getActiveLink());
+
+  if (pill) {
+    // Initial position — wait for fonts/layout to settle before reading rects.
+    const init = () => {
+      syncPill();
+      pill.classList.add('is-ready');
+    };
+    if (document.readyState === 'complete') init();
+    else window.addEventListener('load', init);
+
+    // Slide to whichever link is being hovered, snap back to active on leave.
+    for (const link of links) {
+      link.addEventListener('mouseenter', () => movePillTo(link));
+      link.addEventListener('focus', () => movePillTo(link));
+    }
+    menu.addEventListener('mouseleave', syncPill);
+    window.addEventListener('resize', syncPill);
+  }
+
   // -- Active state --
   const setActive = (href) => {
     for (const a of links) {
       a.classList.toggle('is-active', a.getAttribute('href') === href);
     }
+    syncPill();
   };
 
   // While the page is smooth-scrolling to a clicked destination, the scroll-spy
@@ -183,4 +288,73 @@
 
     for (const s of sections) io.observe(s);
   }
+})();
+
+// Contact form: submit via fetch to Web3Forms, show toast on success/failure.
+(() => {
+   const form = document.getElementById('contact-form');
+   if (!form) return;
+
+   const ICONS = {
+      success:
+         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>',
+      error:
+         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>',
+   };
+
+   let toastEl = null;
+   let toastIconEl = null;
+   let toastTextEl = null;
+   let toastTimer = null;
+   const showToast = (message, type) => {
+      if (!toastEl) {
+         toastEl = document.createElement('div');
+         toastEl.className = 'toast';
+         toastEl.setAttribute('role', 'status');
+         toastEl.setAttribute('aria-live', 'polite');
+         toastIconEl = document.createElement('span');
+         toastIconEl.className = 'toast__icon';
+         toastTextEl = document.createElement('span');
+         toastTextEl.className = 'toast__text';
+         toastEl.append(toastIconEl, toastTextEl);
+         toastEl.addEventListener('click', () => toastEl.classList.remove('is-visible'));
+         document.body.appendChild(toastEl);
+      }
+      const variant = type === 'success' ? 'success' : 'error';
+      toastTextEl.textContent = message;
+      toastIconEl.innerHTML = ICONS[variant];
+      toastEl.classList.remove('toast--success', 'toast--error');
+      toastEl.classList.add('toast--' + variant);
+      // Force reflow so the transition runs even when toast was already visible
+      void toastEl.offsetWidth;
+      toastEl.classList.add('is-visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove('is-visible'), 5000);
+   };
+
+   const submitBtn = form.querySelector('button[type="submit"]');
+   form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (submitBtn) submitBtn.disabled = true;
+      try {
+         const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form),
+         });
+         const data = await res.json().catch(() => ({}));
+         if (res.ok && data.success) {
+            showToast('Message sent — we’ll be in touch shortly.', 'success');
+            form.reset();
+            if (window.hcaptcha && typeof window.hcaptcha.reset === 'function') {
+               window.hcaptcha.reset();
+            }
+         } else {
+            showToast(data.message || 'Could not send. Please try again.', 'error');
+         }
+      } catch {
+         showToast('Network error. Please try again.', 'error');
+      } finally {
+         if (submitBtn) submitBtn.disabled = false;
+      }
+   });
 })();
