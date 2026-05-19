@@ -107,28 +107,6 @@
    });
 })();
 
-// Contact form: open the user's mail client pre-filled on submit.
-// Static site, no backend — the form's `required` attrs handle empty-field validation
-// via the browser's native UI before this handler ever runs.
-(() => {
-   const form = document.getElementById('contact-form');
-   if (!form) return;
-   form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fd = new FormData(form);
-      const fullname = String(fd.get('fullname') || '').trim();
-      const email = String(fd.get('email') || '').trim();
-      const message = String(fd.get('message') || '').trim();
-      const subject = `New contact from ${fullname}`;
-      const body = `From: ${fullname} <${email}>\n\n${message}`;
-      const url =
-         'mailto:kevin@sjdesignstudio.com' +
-         `?subject=${encodeURIComponent(subject)}` +
-         `&body=${encodeURIComponent(body)}`;
-      window.location.href = url;
-   });
-})();
-
 // Mobile nav toggle + active-item sync (click + scroll-spy).
 (() => {
   const toggle = document.querySelector('.nav__toggle');

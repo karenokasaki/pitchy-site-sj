@@ -822,7 +822,25 @@
                <p class="eyebrow eyebrow--gold connect__label">
                   06 &bull; let's connect
                </p>
-               <form class="connect__form" id="contact-form">
+               <form
+                  class="connect__form"
+                  id="contact-form"
+                  action="https://formsubmit.co/karen@sjdesignstudio.com"
+                  method="POST"
+               >
+                  <!-- FormSubmit config (hidden inputs) -->
+                  <input
+                     type="hidden"
+                     name="_subject"
+                     value="New contact from sjdesignstudio.com"
+                  />
+                  <input type="hidden" name="_captcha" value="true" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input
+                     type="hidden"
+                     name="_next"
+                     value="https://sjdesignstudio.com/?sent=1"
+                  />
                   <div class="connect__row">
                      <label class="field field--line">
                         <span class="sr-only">Full name</span>
