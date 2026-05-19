@@ -52,6 +52,83 @@
    io.observe(blueprint);
 })();
 
+// Hero parallax balls (mobile/tablet only). Each ball translates on both
+// axes proportional to how far the user has scrolled past the top of the
+// hero — data-speed-x / data-speed-y (px) set the max displacement at full
+// hero scroll. Positive = right / down, negative = left / up.
+(() => {
+   const hero = document.querySelector('.hero');
+   const balls = document.querySelectorAll('.hero__ball');
+   if (!hero || !balls.length) return;
+   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+   if (window.matchMedia('(min-width: 900px)').matches) return;
+
+   let ticking = false;
+   const update = () => {
+      const rect = hero.getBoundingClientRect();
+      // 0 when hero top is at viewport top, 1 once we've scrolled a full
+      // hero-height past it. Clamp so balls don't keep drifting offscreen.
+      const progress = Math.max(0, Math.min(1, -rect.top / rect.height));
+      balls.forEach((ball) => {
+         const sx = parseFloat(ball.dataset.speedX) || 0;
+         const sy = parseFloat(ball.dataset.speedY) || 0;
+         ball.style.transform =
+            `translate3d(${progress * sx}px, ${progress * sy}px, 0)`;
+      });
+      ticking = false;
+   };
+
+   window.addEventListener(
+      'scroll',
+      () => {
+         if (ticking) return;
+         requestAnimationFrame(update);
+         ticking = true;
+      },
+      { passive: true },
+   );
+   update();
+})();
+
+// FAQ accordion: only one item open at a time.
+// Modern browsers handle this natively via the [name] attribute on <details>;
+// this is the fallback for older ones (and is a no-op where the native
+// behavior already kicks in).
+(() => {
+   const items = document.querySelectorAll('details[name="faq"]');
+   if (items.length < 2) return;
+   items.forEach((d) => {
+      d.addEventListener('toggle', () => {
+         if (!d.open) return;
+         items.forEach((other) => {
+            if (other !== d && other.open) other.open = false;
+         });
+      });
+   });
+})();
+
+// Contact form: open the user's mail client pre-filled on submit.
+// Static site, no backend — the form's `required` attrs handle empty-field validation
+// via the browser's native UI before this handler ever runs.
+(() => {
+   const form = document.getElementById('contact-form');
+   if (!form) return;
+   form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const fullname = String(fd.get('fullname') || '').trim();
+      const email = String(fd.get('email') || '').trim();
+      const message = String(fd.get('message') || '').trim();
+      const subject = `New contact from ${fullname}`;
+      const body = `From: ${fullname} <${email}>\n\n${message}`;
+      const url =
+         'mailto:kevin@sjdesignstudio.com' +
+         `?subject=${encodeURIComponent(subject)}` +
+         `&body=${encodeURIComponent(body)}`;
+      window.location.href = url;
+   });
+})();
+
 // Mobile nav toggle + active-item sync (click + scroll-spy).
 (() => {
   const toggle = document.querySelector('.nav__toggle');

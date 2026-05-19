@@ -141,23 +141,58 @@
             <div class="hero__visual" aria-hidden="true">
                <canvas id="hero-3d"></canvas>
             </div>
+            <!-- Mobile-only decorative balls (hidden on ≥900px where the
+                 Spline 3D scene takes over). Drop your assets at the paths
+                 below; they parallax slightly as the user scrolls. -->
+            <div class="hero__balls" aria-hidden="true">
+               <img
+                  class="hero__ball hero__ball--tr"
+                  src="assets/big-circle.png"
+                  alt=""
+                  width="206"
+                  height="206"
+                  loading="lazy"
+                  decoding="async"
+                  data-speed-x="40"
+                  data-speed-y="120"
+               />
+               <img
+                  class="hero__ball hero__ball--bl"
+                  src="assets/big-circle.png"
+                  alt=""
+                  width="113"
+                  height="113"
+                  loading="lazy"
+                  decoding="async"
+                  data-speed-x="-40"
+                  data-speed-y="-80"
+               />
+            </div>
             <div class="container hero__inner">
                <div class="hero__copy">
                   <h1 class="hero__title">
                      <em class="ital">Clone</em>
                      <span class="hero__title-rest"
-                        >your<br class="hero__title-break" />Top
-                        Performer.</span
+                        >your <br class="hero__title-break" />
+                        Top Performer.</span
                      >
                   </h1>
                   <p class="hero__lede">
-                     We turn your best employee's expertise into your company's
-                     scalable system, liberating them from repetitive tasks and
-                     making your growth repeatable.
+                     We turn your best employee's playbook into your company's
+                     operating system — so their expertise scales and they stop
+                     doing the work a system should do.
                   </p>
-                  <a class="btn btn--primary" href="#contact"
-                     >See how we clone excellence</a
-                  >
+                  <div class="hero__ctas">
+                     <a class="btn btn--primary" href="#contact"
+                        >See how we clone excellence</a
+                     >
+                     <a
+                        class="btn btn--secondary"
+                        href="assets/pdf/SJ-Operational-Self-Check.pdf"
+                        download
+                        >Download our 5-minute self-check</a
+                     >
+                  </div>
                </div>
             </div>
          </header>
@@ -196,7 +231,8 @@
                   Human expertise, <em class="ital">automated</em> outcomes.
                </h2>
                <p class="systems__sub eyebrow eyebrow--muted eyebrow--no-rule">
-                  Three examples with client-sensitive details withheld.
+                  Three production systems. Some client details withheld under
+                  NDA.
                </p>
 
                <div class="cases">
@@ -395,11 +431,62 @@
             </div>
          </section>
 
+         <!-- =================== COMPANIES WE'VE HELPED =================== -->
+         <section class="clients" aria-label="Companies we've helped">
+            <div class="container clients__inner">
+               <p class="eyebrow eyebrow--gold clients__eyebrow">
+                  03 &bull; companies we've helped
+               </p>
+               <ul class="clients__list">
+                  <li class="clients__logo clients__logo--kumho">
+                     <img
+                        src="assets/kumho.png"
+                        alt="Kumho Tire"
+                        width="276"
+                        height="72"
+                        loading="lazy"
+                        decoding="async"
+                     />
+                  </li>
+                  <li class="clients__logo clients__logo--samsung">
+                     <img
+                        src="assets/samsung.png"
+                        alt="Samsung"
+                        width="402"
+                        height="63"
+                        loading="lazy"
+                        decoding="async"
+                     />
+                  </li>
+                  <li class="clients__logo clients__logo--lg">
+                     <img
+                        src="assets/lg.png"
+                        alt="LG"
+                        width="210"
+                        height="96"
+                        loading="lazy"
+                        decoding="async"
+                     />
+                  </li>
+                  <li class="clients__logo clients__logo--midea">
+                     <img
+                        src="assets/midea.png"
+                        alt="Midea"
+                        width="270"
+                        height="104"
+                        loading="lazy"
+                        decoding="async"
+                     />
+                  </li>
+               </ul>
+            </div>
+         </section>
+
          <!-- =================== WORKS =================== -->
          <section class="works" id="works">
             <div class="container">
                <p class="eyebrow eyebrow--gold works__eyebrow">
-                  03 &bull; works
+                  04 &bull; works
                </p>
 
                <div class="works__list">
@@ -704,11 +791,14 @@
          <section class="blueprint" id="offer">
             <div class="container blueprint__inner">
                <p class="eyebrow eyebrow--gold">
-                  04 &bull; THE OPERATIONAL BLUEPRINT
+                  05 &bull; THE OPERATIONAL BLUEPRINT
                </p>
                <h2 class="display">
                   <em class="ital">Free</em>
-                  <br class="blueprint__title-break" /><span class="blueprint__title-rest">Business Audit</span>
+                  <br class="blueprint__title-break" /><span
+                     class="blueprint__title-rest"
+                     >Business Audit</span
+                  >
                </h2>
                <ul class="pills" aria-label="Audit details">
                   <li>30 minutes</li>
@@ -717,36 +807,179 @@
                </ul>
                <p class="serif-lede">
                   We walk through your operations, identify what's costing you
-                  the most, and tell you exactly what can and can't be replaced.
+                  the most, and tell you exactly what can and can’t be replaced.
+               </p>
+               <p class="serif-lede">
                   If the number isn't worth it, we'll tell you that too.
                </p>
-               <a class="btn btn--primary" href="#contact"
-                  >Request Your 10X Audit</a
-               >
+               <a class="btn btn--primary" href="#contact">BOOK MY AUDIT</a>
             </div>
          </section>
 
          <!-- =================== CONNECT =================== -->
          <section class="connect" id="contact">
             <div class="container connect__inner">
-               <p class="eyebrow eyebrow--gold connect__label">let's connect</p>
-               <a class="connect__email" href="mailto:kevin@sjdesignstudio.com"
-                  >kevin@sjdesignstudio.com</a
-               >
-               <a
-                  class="connect__send"
-                  href="mailto:kevin@sjdesignstudio.com"
-                  aria-label="Send email to kevin@sjdesignstudio.com"
-               >
-                  <img
-                     src="assets/paper-plane.png"
-                     alt=""
-                     width="64"
-                     height="64"
-                     loading="lazy"
-                     decoding="async"
-                  />
-               </a>
+               <p class="eyebrow eyebrow--gold connect__label">
+                  06 &bull; let's connect
+               </p>
+               <form class="connect__form" id="contact-form">
+                  <div class="connect__row">
+                     <label class="field field--line">
+                        <span class="sr-only">Full name</span>
+                        <input
+                           type="text"
+                           name="fullname"
+                           placeholder="Fullname"
+                           required
+                           autocomplete="name"
+                        />
+                     </label>
+                     <label class="field field--line">
+                        <span class="sr-only">Email</span>
+                        <input
+                           type="email"
+                           name="email"
+                           placeholder="Email"
+                           required
+                           autocomplete="email"
+                        />
+                     </label>
+                  </div>
+                  <label class="field field--box">
+                     <span class="sr-only">Message</span>
+                     <textarea
+                        name="message"
+                        rows="6"
+                        placeholder="Message"
+                        required
+                     ></textarea>
+                  </label>
+                  <button
+                     type="submit"
+                     class="connect__send"
+                     aria-label="Send message"
+                  >
+                     <img
+                        src="assets/paper-plane.png"
+                        alt=""
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                        decoding="async"
+                     />
+                  </button>
+               </form>
+            </div>
+         </section>
+
+         <!-- =================== FAQ =================== -->
+         <section class="faq" id="faq" aria-labelledby="faq-title">
+            <div class="container faq__inner">
+               <p class="eyebrow eyebrow--gold" id="faq-title">07 &bull; FAQ</p>
+               <ul class="faq__list">
+                  <li>
+                     <details class="faq__item" name="faq" open>
+                        <summary class="faq__q">
+                           <span>What does this cost?</span>
+                           <span class="faq__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq__a">
+                           <p>
+                              Audits are free. Builds typically run
+                              $15K&ndash;$60K for a single agent or workflow,
+                              depending on complexity and integrations.
+                              Infrastructure runs $30&ndash;200/month after
+                              launch. We'll quote you on the audit call.
+                           </p>
+                        </div>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="faq__item" name="faq">
+                        <summary class="faq__q">
+                           <span>How long does a typical build take?</span>
+                           <span class="faq__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq__a">
+                           <p>
+                              Most projects ship in 4&ndash;8 weeks from
+                              kickoff. We won't take on work we can't deliver in
+                              under 12 weeks.
+                           </p>
+                        </div>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="faq__item" name="faq">
+                        <summary class="faq__q">
+                           <span>What if my data is messy?</span>
+                           <span class="faq__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq__a">
+                           <p>
+                              It always is. We design around messy data, not
+                              against it. The decision-tree case study you read
+                              about started with a Slack channel that nobody had
+                              cleaned in three years.
+                           </p>
+                        </div>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="faq__item" name="faq">
+                        <summary class="faq__q">
+                           <span
+                              >Do you only work with consumer electronics
+                              companies?</span
+                           >
+                           <span class="faq__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq__a">
+                           <p>
+                              No. Our published case studies are weighted toward
+                              Samsung because that's where we've been allowed to
+                              use the name. We've shipped systems for [X, Y, Z
+                              industries].
+                           </p>
+                        </div>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="faq__item" name="faq">
+                        <summary class="faq__q">
+                           <span
+                              >What happens to the employees whose work gets
+                              automated?</span
+                           >
+                           <span class="faq__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq__a">
+                           <p>
+                              Every system we've shipped freed those people to
+                              do higher-leverage work &mdash; not replaced them.
+                              That's the whole reason the framing is "clone,"
+                              not "replace." If you're looking to cut headcount,
+                              we're probably not the right fit.
+                           </p>
+                        </div>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="faq__item" name="faq">
+                        <summary class="faq__q">
+                           <span>Can I see one of your systems running?</span>
+                           <span class="faq__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq__a">
+                           <p>
+                              On the audit call, yes &mdash; we'll walk you
+                              through a live deployment relevant to your
+                              business.
+                           </p>
+                        </div>
+                     </details>
+                  </li>
+               </ul>
             </div>
          </section>
       </main>
@@ -764,18 +997,17 @@
            to keep it off the critical path (huge TBT win on Lighthouse). -->
       <script type="module">
          (() => {
-            if (!window.matchMedia("(min-width: 900px)").matches) return;
             const canvas = document.getElementById("hero-3d");
             if (!canvas) return;
+            const desktopMQ = window.matchMedia("(min-width: 900px)");
 
             let started = false;
             const start = async () => {
                if (started) return;
                started = true;
                try {
-                  const { Application } = await import(
-                     "https://unpkg.com/@splinetool/runtime/build/runtime.js"
-                  );
+                  const { Application } =
+                     await import("https://unpkg.com/@splinetool/runtime/build/runtime.js");
                   const app = new Application(canvas);
                   await app.load(
                      "https://prod.spline.design/y97UoUeZ8Pf0k6m7/scene.splinecode",
@@ -794,19 +1026,32 @@
                }
             };
 
-            if ("IntersectionObserver" in window) {
-               const io = new IntersectionObserver((entries) => {
-                  for (const entry of entries) {
-                     if (entry.isIntersecting) {
-                        io.disconnect();
-                        schedule();
-                        break;
+            // Attempt init only when we're on desktop and the canvas is in view.
+            // Re-fires if the user starts on mobile and later resizes up.
+            const initIfDesktop = () => {
+               if (started) return;
+               if (!desktopMQ.matches) return;
+               if ("IntersectionObserver" in window) {
+                  const io = new IntersectionObserver((entries) => {
+                     for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                           io.disconnect();
+                           schedule();
+                           break;
+                        }
                      }
-                  }
-               });
-               io.observe(canvas);
-            } else {
-               schedule();
+                  });
+                  io.observe(canvas);
+               } else {
+                  schedule();
+               }
+            };
+
+            initIfDesktop();
+            if (desktopMQ.addEventListener) {
+               desktopMQ.addEventListener("change", initIfDesktop);
+            } else if (desktopMQ.addListener) {
+               desktopMQ.addListener(initIfDesktop); // Safari <14
             }
          })();
       </script>

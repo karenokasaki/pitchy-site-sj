@@ -351,6 +351,15 @@ ul {
    width: 1.25em;
    height: 1.25em;
 }
+/* Secondary CTA: inverse of the primary (transparent, fills on hover) */
+.btn--secondary {
+   background: transparent;
+   color: #e8e2d5;
+}
+.btn--secondary:hover {
+   background: #e8e2d5;
+   color: var(--bg-dark);
+}
 
 /* =========================================================
    Brand mark (fixed top-left, separate from the centered nav pill)
@@ -533,7 +542,10 @@ ul {
 .hero__copy {
    display: grid;
    gap: clamp(1.75rem, 1rem + 2vw, 3.5rem); /* up to 56px to match Figma */
-   max-width: 43.5625rem; /* 697px */
+   max-width: 55rem; /* wider so the two CTAs fit side-by-side */
+   /* Don't let intrinsic content (long button text, long title words)
+      inflate the grid track of .hero__inner past the container width. */
+   min-width: 0;
 }
 .hero__title {
    font-family: var(--font-display); /* Inter (base — the .ital span overrides to Newsreader Italic) */
@@ -543,6 +555,7 @@ ul {
    letter-spacing: 0;
    color: var(--gold);
    margin: 0;
+   max-width: 550px;
 }
 .hero__title-rest {
    font-family: var(--font-display); /* Inter Light 300 */
@@ -551,12 +564,7 @@ ul {
    letter-spacing: -0.03em;
 }
 .hero__title-break {
-   display: none;
-}
-@media (max-width: 720px) {
-   .hero__title-break {
-      display: inline;
-   }
+   display: inline;
 }
 .hero__lede {
    font-family: var(--font-serif);
@@ -565,9 +573,17 @@ ul {
    line-height: 1.4;
    color: var(--ink-on-dark-muted);
    margin: 0;
+   max-width: 700px;
 }
 .hero .btn {
    justify-self: start;
+}
+.hero__ctas {
+   display: flex;
+   flex-wrap: wrap;
+   gap: clamp(0.75rem, 0.5rem + 0.6vw, 1.25rem);
+   justify-self: start;
+   pointer-events: auto;
 }
 
 /* Mobile overrides: no min-height, larger title, tighter gap */
@@ -575,8 +591,10 @@ ul {
    .hero {
       min-height: 0;
    }
+   /* Override .container's gutter on mobile — the long CTA "Download our
+      5-minute self-check" only fits with a tighter horizontal frame */
    .hero__inner {
-      padding-inline: 24px;
+      padding-inline: 16px;
    }
    .hero__copy {
       gap: 40px;
@@ -584,6 +602,7 @@ ul {
    }
    .hero__title {
       font-size: 50px;
+      text-align: left;
    }
    .hero__lede {
       font-size: 20px;
@@ -592,23 +611,40 @@ ul {
    .hero .btn {
       justify-self: center;
    }
-   /* Smaller button text on mobile so it fits without overflow */
+   .hero__ctas {
+      flex-direction: column;
+      align-items: stretch;
+      justify-self: stretch;
+      gap: 12px;
+   }
+   .hero__ctas .btn {
+      width: 100%;
+   }
+   /* Smaller button text on mobile so it fits without overflow.
+      white-space: normal lets the long "Download our 5-minute self-check"
+      label wrap to 2 lines on very narrow viewports (<352px) instead of
+      forcing the button — and the whole hero__copy track — wider than the
+      container. */
    .btn {
       font-size: 14px;
-      padding: 24px;
+      padding: 16px;
+      white-space: normal;
    }
 }
 
-/* Full-bleed background of the hero, behind the text */
+/* Full-bleed background of the hero, behind the text. visibility (not
+   display) so the Spline WebGL canvas stays in the rendering tree across
+   resizes — display:none can drop the GL context and the scene won't
+   recover when the user goes back to desktop. */
 .hero__visual {
    position: absolute;
    inset: 0;
    z-index: 0;
-   display: none;
+   visibility: hidden;
 }
 @media (min-width: 900px) {
    .hero__visual {
-      display: block;
+      visibility: visible;
    }
 }
 .hero__visual canvas {
@@ -621,6 +657,51 @@ ul {
 }
 
 /* =========================================================
+   Mobile-only decorative balls (≤899px). Parallax handled
+   in script.js. Hidden where the Spline canvas takes over.
+   ========================================================= */
+.hero__balls {
+   position: absolute;
+   inset: 0;
+   z-index: 0;
+   pointer-events: none;
+   overflow: hidden;
+}
+@media (min-width: 900px) {
+   .hero__balls {
+      display: none;
+   }
+}
+.hero__ball {
+   position: absolute;
+   display: block;
+   width: auto;
+   height: auto;
+   /* Promote to its own layer so the JS transform is GPU-composited */
+   will-change: transform;
+}
+/* Lateral offsets in px (not %) so the same chunk of the ball stays
+   off-screen regardless of viewport width. Percentages compute against the
+   hero width and break above ~420px (the ball ends up fully off-screen). */
+.hero__ball--tr {
+   top: 14%;
+   right: -100px;
+   width: 206px;
+   height: 206px;
+}
+.hero__ball--bl {
+   bottom: -20px;
+   left: -40px;
+   width: 113px;
+   height: 113px;
+}
+@media (prefers-reduced-motion: reduce) {
+   .hero__ball {
+      will-change: auto;
+   }
+}
+
+/* =========================================================
    Problem
    ========================================================= */
 .problem {
@@ -630,6 +711,13 @@ ul {
 .problem__inner {
    display: grid;
    gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+}
+/* Prevent grid items from inflating their tracks past the container.
+   Grid items default to min-width: auto (= min-content), and the
+   .problem__accent inside uses width: max-content — together they can
+   force the grid to overflow its container's gutter padding on mobile. */
+.problem__inner > * {
+   min-width: 0;
 }
 @media (max-width: 720px) {
    .problem__inner {
@@ -664,6 +752,11 @@ ul {
 }
 .problem__body {
    display: grid;
+   /* Force the implicit single track to a 0-min 1fr-max so the inner
+      .problem__accent (width: max-content) can't inflate it past the parent.
+      Without this, max-content bubbles up the grid chain and the body
+      overflows .container's gutter on mobile. */
+   grid-template-columns: minmax(0, 1fr);
    gap: clamp(1.25rem, 1rem + 1vw, 2rem);
    max-width: 60ch;
 }
@@ -680,7 +773,7 @@ ul {
    position: relative;
    font-family: var(--font-display);
    font-weight: 400;
-   font-size: clamp(1.25rem, 0.95rem + 1.2vw, 1.75rem);
+   font-size: 40px;
    color: var(--ink-on-dark);
    margin: 0;
    padding-bottom: 10px;
@@ -707,11 +800,6 @@ ul {
    margin-top: 40px;
    font-size: 1.25rem; /* 20px */
    color: #75736f;
-}
-@media (min-width: 720px) {
-   .systems__sub {
-      padding-top: 50px; /* desktop: extra breathing room above the right-aligned subtitle */
-   }
 }
 
 .cases {
@@ -780,6 +868,7 @@ ul {
    letter-spacing: 0.04em;
    text-transform: uppercase;
    line-height: 1.4;
+   min-height: 67.2px;
    margin: 0;
    color: var(--ink-on-light);
 }
@@ -862,6 +951,49 @@ ul {
 .systems .eyebrow--muted::before {
    background: var(--gold-mid);
 }
+
+/* =========================================================
+   Companies we've helped — logo strip on a slightly lighter
+   dark band, sitting between Systems and Works.
+   ========================================================= */
+.clients {
+   background: #313131;
+   padding: var(--section-y) 0;
+}
+.clients__inner {
+   display: grid;
+   gap: clamp(2.5rem, 1.5rem + 3vw, 5rem);
+}
+.clients__list {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: clamp(40px, 19px + 5.6vw, 100px);
+}
+.clients__logo {
+   display: inline-flex;
+   align-items: center;
+}
+.clients__logo img {
+   width: 100%;
+   height: auto;
+   filter: grayscale(1) brightness(0.85);
+   opacity: 0.55;
+   transition:
+      opacity 200ms ease,
+      filter 200ms ease;
+}
+.clients__logo img:hover {
+   opacity: 0.85;
+   filter: grayscale(1) brightness(1.05);
+}
+/* Fluid widths: mobile (~375px viewport) → desktop (~1440px viewport)
+   kumho   76 → 140, samsung 103 → 201, lg 52 → 105, midea 68 → 135 */
+.clients__logo--kumho   { max-width: clamp(76px,  53px + 6vw,   140px); }
+.clients__logo--samsung { max-width: clamp(103px, 68px + 9.2vw, 201px); }
+.clients__logo--lg      { max-width: clamp(52px,  33px + 5vw,   105px); }
+.clients__logo--midea   { max-width: clamp(68px,  44px + 6.3vw, 135px); }
 
 /* =========================================================
    Works
@@ -1165,11 +1297,12 @@ ul {
 }
 .blueprint .serif-lede {
    color: var(--ink-on-dark-muted);
-   max-width: 51ch;
+   max-width: 63ch;
 }
 
 /* =========================================================
-   Connect — label top-left, email centered, divider, send icon
+   Connect — contact form: two underline fields (name + email),
+   boxed message textarea, paper-plane submit button.
    ========================================================= */
 .connect {
    background: var(--bg-dark);
@@ -1182,30 +1315,88 @@ ul {
 .connect__label {
    justify-self: start;
 }
-.connect__email {
-   justify-self: center;
-   text-align: center;
-   max-width: 100%;
-   font-family: var(--font-display);
+
+.connect__form {
+   display: grid;
+   gap: clamp(1.5rem, 1rem + 1vw, 2rem);
+}
+.connect__row {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: clamp(1.5rem, 1rem + 1vw, 2.5rem);
+}
+@media (min-width: 720px) {
+   .connect__row {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+.field {
+   display: block;
+   width: 100%;
+   transition: border-color 200ms ease;
+}
+.field input,
+.field textarea {
+   width: 100%;
+   border: 0;
+   background: transparent;
+   color: var(--ink-on-dark);
+   /* Force Inter — form controls don't inherit font-family by default
+      in most browsers (textarea even defaults to monospace) */
+   font-family: "Inter", system-ui, sans-serif;
    font-weight: 300;
-   font-size: clamp(1.125rem, 0.4rem + 3.8vw, 4.5rem); /* 18 mobile → 72 @ 1728 */
-   letter-spacing: -0.02em;
-   line-height: 1.1;
+   font-size: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+   line-height: 1.5;
+   letter-spacing: 0;
+   /* Match body antialiasing — form controls don't inherit these */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+   padding: 0;
+   margin: 0;
+   resize: vertical;
+}
+.field input:focus,
+.field textarea:focus {
+   outline: none;
+}
+.field--line {
+   border-bottom: 2px solid var(--rule-on-dark);
+   padding: 16px 4px;
+}
+.field--line:focus-within {
+   border-bottom-color: var(--gold);
+}
+.field--box {
+   border: 2px solid var(--rule-on-dark);
+   padding: 24px;
+}
+.field--box:focus-within {
+   border-color: var(--gold);
+}
+.field--box textarea {
+   display: block;
+   min-height: 140px;
+}
+/* Placeholder inherits font from the input itself — only color/opacity here
+   so changing the input font cascades to the placeholder too. */
+.field input::placeholder,
+.field textarea::placeholder {
    color: var(--ink-on-dark-muted);
-   word-break: break-word;
-   text-decoration: none;
-   /* underline rule grows with the email itself */
-   padding-bottom: clamp(1rem, 0.5rem + 1vw, 2rem);
-   margin-top: 40px;
-   border-bottom: 1px solid var(--rule-on-dark);
-   transition: color 200ms ease;
+   opacity: 1;
 }
-.connect__email:hover {
-   color: var(--gold);
-}
+
 .connect__send {
-   justify-self: center;
-   display: inline-block;
+   justify-self: end;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   background: transparent;
+   border: 0;
+   padding: 0;
+   color: inherit;
+   cursor: pointer;
    transition: transform 200ms ease;
 }
 .connect__send:hover {
@@ -1213,28 +1404,121 @@ ul {
 }
 .connect__send img {
    display: block;
-   width: clamp(2.5rem, 2.16rem + 1.7vw, 4rem); /* 40 mobile → 64 @ 1728 */
-   height: auto;
+   width: 48px;
+   height: 48px;
    object-fit: contain;
 }
 @media (max-width: 720px) {
-   .connect__send img {
-      width: 24px;
-      height: 24px;
+   .field--box {
+      padding: 20px;
    }
-   .connect__inner {
-      gap: 0;
+}
+
+/* =========================================================
+   FAQ — <details name="faq"> gives single-open accordion
+   behavior natively in modern browsers. JS in script.js
+   handles older browsers as a fallback.
+   ========================================================= */
+.faq {
+   background: var(--bg-dark);
+   padding: 0 0 var(--section-y);
+}
+@media (max-width: 720px) {
+   .faq {
+      padding-bottom: 0;
    }
-   .connect__label {
-      margin-bottom: 60px;
+   /* Mobile only: drop the trailing 32px below the last item so the section
+      ends flush with the footer. The relevant element depends on open/closed
+      state. :last-child is anchored on the <li>, not the .faq__item (every
+      item is the only child of its own <li>). */
+   .faq__list li:last-child .faq__item:not([open]) .faq__q,
+   .faq__list li:last-child .faq__item[open] .faq__a {
+      padding-bottom: 0;
    }
-   .connect__email {
-      margin-top: 0;
-      font-size: 24px;
+}
+.faq__inner {
+   display: grid;
+   gap: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+}
+.faq__list {
+   display: grid;
+   padding-inline: 0;
+}
+@media (min-width: 720px) {
+   .faq__list {
+      padding-inline: clamp(0px, 5vw, 6rem);
    }
-   .connect__send {
-      margin-top: 24px;
-   }
+}
+.faq__item {
+   border-bottom: 1px solid var(--rule-on-dark);
+}
+/* :last-child must be on the <li> wrapper — every .faq__item is the only
+   child of its own <li>, so .faq__item:last-child would match all of them. */
+.faq__list li:last-child .faq__item {
+   border-bottom: 0;
+}
+.faq__q {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 24px;
+   padding: 32px 0;
+   cursor: pointer;
+   list-style: none;
+   font-family: "Inter", system-ui, sans-serif;
+   font-weight: 500;
+   font-size: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+   line-height: 1.4;
+   color: var(--cream);
+}
+/* Hide native disclosure triangles across browsers */
+.faq__q::-webkit-details-marker {
+   display: none;
+}
+.faq__q::marker {
+   display: none;
+   content: "";
+}
+.faq__icon {
+   position: relative;
+   width: 16px;
+   height: 16px;
+   flex-shrink: 0;
+   color: var(--gold);
+}
+.faq__icon::before,
+.faq__icon::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   background: currentColor;
+}
+.faq__icon::before {
+   width: 16px;
+   height: 1.5px;
+   transform: translate(-50%, -50%);
+}
+.faq__icon::after {
+   width: 1.5px;
+   height: 16px;
+   transform: translate(-50%, -50%);
+   transition: transform 200ms ease;
+}
+.faq__item[open] .faq__icon::after {
+   transform: translate(-50%, -50%) scaleY(0);
+}
+.faq__a {
+   padding: 0 0 32px;
+   max-width: 80ch;
+}
+.faq__a p {
+   margin: 0;
+   font-family: "Inter", system-ui, sans-serif;
+   font-weight: 300;
+   font-size: var(--fs-body);
+   line-height: 1.6;
+   color: var(--ink-on-dark-muted);
 }
 
 /* =========================================================
